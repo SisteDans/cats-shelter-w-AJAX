@@ -23,7 +23,7 @@ const setContent = function (obj) {
 }
 
 const getCat = async function(id) {
-    let res = await fetch("http://sb-cats.herokuapp.com/api/2/didika/show/" + id);
+    let res = await fetch("https://sb-cats.herokuapp.com/api/2/didika/show/" + id);
     let ans = await res.json();
     document.querySelector("main").innerHTML = setContent(ans.data);
 }
@@ -58,7 +58,7 @@ const acceptUpd = function (el) {
 }
 
 const updateCat = async function(id, body, parent, fav) {
-    let res = await fetch(`http://sb-cats.herokuapp.com/api/2/didika/update/${id}`, {
+    let res = await fetch(`https://sb-cats.herokuapp.com/api/2/didika/update/${id}`, {
         method: "put",
         headers: {
             "Content-Type": "application/json",
@@ -82,7 +82,7 @@ const deleteCat = function (el) {
 			let index = obj.findIndex(el => el.id === id); 
 			obj.splice(index, 1); 
 			localStorage.setItem("cats", JSON.stringify(obj)); 
-			fetch(`http://sb-cats.herokuapp.com/api/2/didika/delete/${id}`, {
+			fetch(`https://sb-cats.herokuapp.com/api/2/didika/delete/${id}`, {
 				method: 'DELETE',
 			});
 			setTimeout(function() {

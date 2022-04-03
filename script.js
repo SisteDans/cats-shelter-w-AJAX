@@ -15,12 +15,12 @@ function setCard(info = {}) {
 }
 
 let path = {
-    getAll: "http://sb-cats.herokuapp.com/api/2/didika/show",
-    getOne: "http://sb-cats.herokuapp.com/api/2/didika/show/",
-    getIds: "http://sb-cats.herokuapp.com/api/2/didika/ids",
-    add: "http://sb-cats.herokuapp.com/api/2/didika/add",
-    upd: "http://sb-cats.herokuapp.com/api/2/didika/update/",
-    del: "http://sb-cats.herokuapp.com/api/2/didika/delete/"
+    getAll: "https://sb-cats.herokuapp.com/api/2/didika/show",
+    getOne: "https://sb-cats.herokuapp.com/api/2/didika/show/",
+    getIds: "https://sb-cats.herokuapp.com/api/2/didika/ids",
+    add: "https://sb-cats.herokuapp.com/api/2/didika/add",
+    upd: "https://sb-cats.herokuapp.com/api/2/didika/update/",
+    del: "https://sb-cats.herokuapp.com/api/2/didika/delete/"
 }
 
 let cats = storage.getItem("cats");
